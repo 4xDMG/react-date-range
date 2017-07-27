@@ -221,6 +221,8 @@ class Calendar extends Component {
       const isEdge        = isStartEdge || isEndEdge;
       const isToday       = today.isSame(dayMoment);
       const isSunday      = dayMoment.day() === 0;
+      const isSaturday    = dayMoment.day() === 6;
+      console.log(isSaturday);
       const isSpecialDay  = specialDays && specialDays.some((specialDay) => {
         return dayMoment.endOf('day').isSame(specialDay.date.endOf('day'));
       });
@@ -236,6 +238,7 @@ class Calendar extends Component {
           isSelected={ isSelected || isEdge }
           isInRange={ isInRange }
           isSunday={ isSunday }
+          isSaturday={ isSaturday }
           isSpecialDay={ isSpecialDay }
           isToday={ isToday }
           key={ index }
