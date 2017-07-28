@@ -20,6 +20,7 @@ export const defaultClasses = {
   year                       : 'rdr-MonthAndYear-year',
   daySunday                  : 'rdr-Sunday',
   daySaturday                : 'rdr-Saturday',
+  dayOneDay                  : 'rdr-OneDay',
   daySpecialDay              : 'rdr-SpecialDay',
 };
 
@@ -68,6 +69,9 @@ const defaultTheme = {
   },
 
   DaySaturday: {
+  },
+
+  DayOneDay: {
   },
 
   DaySpecialDay: {
@@ -212,6 +216,7 @@ export default (customTheme = {}) => {
     DayToday : { ...defaultTheme.DayToday, ...customTheme.DayToday },
     DaySunday: { ...defaultTheme.DaySunday, ...customTheme.DaySunday },
     DaySaturday: { ...defaultTheme.DaySaturday, ...customTheme.DaySaturday },
+    DayOneDay: { ...defaultTheme.DayOneDay, ...customTheme.DayOneDay },
     DaySpecialDay: { ...defaultTheme.DaySpecialDay, ...customTheme.DaySpecialDay },
 
     DayActive : { ...defaultTheme.DayActive, ...customTheme.DayActive },

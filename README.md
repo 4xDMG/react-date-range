@@ -5,6 +5,8 @@
 
 A React component for choosing dates and date ranges. Uses [Moment.js](http://momentjs.com/) for date operations.
 
+This fork adds a class on Saturdays to allow styling of the last day of the week.
+
 **Live Demo :** [http://adphorus.github.io/react-date-range](http://adphorus.github.io/react-date-range)
 
 ![](https://cdn.pbrd.co/images/1fjQlZzy.png)

@@ -53,7 +53,7 @@ class DayCell extends Component {
 
   getStateStyles() {
     const { hover, active } = this.state;
-    const { isSelected, isInRange, isPassive, isStartEdge, isEndEdge, dayMoment, isToday, isSunday, isSaturday, isSpecialDay } = this.props;
+    const { isSelected, isInRange, isPassive, isStartEdge, isEndEdge, dayMoment, isToday, isSunday, isOneDay, isSaturday, isSpecialDay } = this.props;
     const { styles } = this;
 
     const hoverStyle    = hover ? styles['DayHover'] : {};
@@ -66,6 +66,7 @@ class DayCell extends Component {
     const todayStyle    = isToday ? styles['DayToday'] : {};
     const sundayStyle = isSunday ? styles['DaySunday'] : {};
     const saturdayStyle = isSaturday ? styles['DaySaturday'] : {};
+    const oneDayStyle = isOneDay ? styles['DayOneDay'] : {};
     const specialDayStyle = isSpecialDay ? styles['DaySpecialDay'] : {};
 
     return {
@@ -83,7 +84,7 @@ class DayCell extends Component {
   }
 
   getClassNames(classes) {
-    const { isSelected, isInRange, isPassive, isStartEdge, isEndEdge, isToday, isSunday, isSaturday, isSpecialDay } = this.props;
+    const { isSelected, isInRange, isPassive, isStartEdge, isEndEdge, isToday, isSunday, isSaturday, isOneDay, isSpecialDay } = this.props;
 
     return classnames({
       [classes.day]       : true,
@@ -96,6 +97,7 @@ class DayCell extends Component {
       [classes.daySunday]: isSunday,
       [classes.daySpecialDay]: isSpecialDay,
       [classes.daySaturday]: isSaturday,
+      [classes.dayOneDay]: isOneDay,
     });
 
   }
